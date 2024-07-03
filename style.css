@@ -175,10 +175,8 @@ a.nav:hover:after {
 }
 .project{
     display: flex;
-
-    display: flex;
-        flex-flow: wrap;
-        justify-content: space-between;
+    flex-flow: wrap;
+    justify-content: space-between;
 
     
 }
@@ -823,4 +821,68 @@ a.nav-3{
 
 }
 
-/* 2560 x 1440 */
+/* Media для мобильных устройств */
+@media (max-width: 768px) {
+    .inf {
+        height: auto;
+        padding: 20px;
+    }
+
+    .inf_1 {
+        padding-left: 0;
+        font-size: 2em; /* Уменьшить размер шрифта */
+        padding-top: 10%;
+    }
+
+    .inf_1 p {
+        font-size: 1.5em;
+    }
+
+    .inf_2 {
+        padding-left: 0;
+        font-size: 1.5em; /* Уменьшить размер шрифта */
+        text-align: center; /* Центрировать текст */
+    }
+
+    .inf_2 p {
+        font-size: 1.2em;
+    }
+
+    .slide-in_1{
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: slide-in 2s forwards;
+    }
+    
+    .slide-in_2{
+        opacity: 0;
+
+        padding-left: 10%;
+    }
+    .slide-in_3{
+        opacity: 0;
+        padding-left: 20%;
+    
+    }
+    .name{
+        display: none;
+    }
+    .name-line{
+        display: none;
+    }
+    .o_project{
+        text-align: center;
+        font-size: 1.3em;
+    }
+    .project_block_2 img{
+        width: 40vh;
+    }
+    .project_block{
+        display: block;
+    }
+    .project_block img{
+        width: 40vh;
+        height: 100%;
+        margin-top: 5%;
+    }
+}
