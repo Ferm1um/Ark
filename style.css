@@ -224,7 +224,7 @@ a.nav:hover:after {
     margin: auto;
 }
 .project_block_2 img{
-    width: 65vh;
+    width: 45vh;
     box-shadow: 1px 1px 40px #000;
     border-radius: 15px;
     transition: transform 0.3s ease;
@@ -277,7 +277,7 @@ a.nav:hover:after {
     margin-top: 3%;
     font-size: 4em;
     padding-left: 5%;
-    position: absolute;
+    width: 45%;
 
 }
 .vibor_text h3{
@@ -285,13 +285,13 @@ a.nav:hover:after {
 }
 .vibor_block{
     display: flex;
-    margin-left: 45%;
     width: 50%;
     background-color: #cbcfd9;
     border-radius: 40px;
     height: 100%;
     margin-top: 5%;
     justify-content: space-around;
+    margin-right: 5%;
     
 }
 
@@ -517,6 +517,12 @@ button.next {
 
 .Sec_o_nas_icon p{
     
+}
+
+.o_ns{
+    width: 25%;
+    padding-left: 10%;
+    font-size: 1.5em;
 }
 
 .log_f a{
@@ -798,9 +804,10 @@ a.nav-3{
     
     .project_block_2{
         margin: auto;
+        width: 45vh;
     }
     .project_block_2 img{
-        width: 65vh;
+        width: 45vh;
         box-shadow: 1px 1px 40px #000;
         border-radius: 15px;
         transition: transform 0.3s ease;
@@ -821,8 +828,33 @@ a.nav-3{
 
 }
 
+
+/* Стили для точек */
+.dots {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
 /* Media для мобильных устройств */
-@media (max-width: 768px) {
+@media (min-width: 350px) and (max-width: 768px) {
+    .navigation{
+        position: relative;
+    }
     .inf {
         height: auto;
         padding: 20px;
@@ -884,5 +916,94 @@ a.nav-3{
         width: 40vh;
         height: 100%;
         margin-top: 5%;
+    }
+    .kon{
+        flex-wrap: wrap;
+    }
+    iframe{
+        width: 300px;
+        height: 300px;
+    }
+    .nav_1_1{
+        display: none;
+    }
+    .o_nas_text {
+        position:relative;
+        width: 100%;
+        font-size: 1.3em;
+        padding: 0%;
+    }
+
+    .Sec_o_nas{
+        display: block;
+        margin: auto;
+        padding-top: 5%;
+        width: 90%s;
+    }
+    .o_ns h1{
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .o_ns{
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .pictures_o_nas {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        height: 100%;
+    }
+
+    .pictures_o_nas img {
+        border-radius: 15px;
+        box-shadow: -10px 20px 20px #8795b7;
+        margin-top: 10%;
+    }
+    .vibor{
+        display: block;
+        border-radius: 50px;
+    }
+    .vibor_text{
+        width: 100%;
+        font-size: 2em;
+        text-align: center;
+        padding-left: 0;
+    }
+    .vibor_block{
+        width: 90%;
+        margin: auto;
+        height: auto;
+        display: block;
+        padding: 2%;
+    }
+    .vibor_block_text{
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+
+    .slider_block_li{
+        position: relative;
+    width: 100%;
+    overflow: hidden;
+    }
+
+    .block_li {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .block_li_text {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .sec_vibor{
+        border-radius: 50px;
     }
 }
