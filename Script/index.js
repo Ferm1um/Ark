@@ -126,6 +126,8 @@ let currentSlide = 0;
 
 const slides = document.querySelectorAll('.block_li_text');
 const dots = document.querySelectorAll('.dot');
+const slider = document.getElementById('slider_block_li');
+let startX, endX;
 
 function showSlide(index) {
     if (index >= slides.length) {
@@ -149,5 +151,34 @@ document.querySelectorAll('.dot').forEach((dot, index) => {
     });
 });
 
-// Initialize the first slide
+// Инициализация слайдера с первым слайдом
 showSlide(currentSlide);
+
+// Добавление поддержки свайпов
+function handleTouchStart(event) {
+    startX = event.touches ? event.touches[0].clientX : event.clientX;
+}
+
+function handleTouchMove(event) {
+    endX = event.touches ? event.touches[0].clientX : event.clientX;
+}
+
+function handleTouchEnd() {
+    if (startX - endX > 50) {
+        showSlide(currentSlide + 1);
+    } else if (endX - startX > 50) {
+        showSlide(currentSlide - 1);
+    }
+}
+
+slider.addEventListener('mousedown', handleTouchStart);
+slider.addEventListener('mousemove', handleTouchMove);
+slider.addEventListener('mouseup', handleTouchEnd);
+
+slider.addEventListener('touchstart', handleTouchStart);
+slider.addEventListener('touchmove', handleTouchMove);
+slider.addEventListener('touchend', handleTouchEnd);
+
+
+
+// слайдер на отзывы на телефон
