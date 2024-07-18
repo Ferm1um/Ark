@@ -6,6 +6,7 @@
 body{
     width: 100%;
     margin: auto;
+    color: #000;
 }
 
 main{
@@ -1059,6 +1060,7 @@ a.nav-3{
         display: none;
     }
     .log_f{
+        padding: 2%;
         width: 100%;
     }
     .footer_1{
@@ -1103,13 +1105,17 @@ a.nav-3{
         margin-right: 15px;
         border-radius: 20px;
         font-size: 1.1em;
+        margin-bottom: 5%;
         scroll-snap-align: center; /* Center alignment for scroll snapping */
     }
 
     .strelki{
         display: none;
     }
-
+    .otzivi{
+        height: auto;
+    }
+}
 
 @media (max-width: 425px) {
     .inf {
@@ -1221,6 +1227,5 @@ a.nav-3{
         font-size: 2em;
     }
 }
-
 
 
