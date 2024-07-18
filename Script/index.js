@@ -182,3 +182,25 @@ slider.addEventListener('touchend', handleTouchEnd);
 
 
 // слайдер на отзывы на телефон
+ // Получаем элементы слайдера и слайды
+ document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector(".slider");
+    let scrollPos = 0;
+    const slides = document.querySelectorAll(".slide");
+    const slideWidth = slides[0].offsetWidth + // Width of a single slide including margin
+                       parseInt(getComputedStyle(slides[0]).marginRight);
+
+    function nextSlide() {
+        if (scrollPos < slider.scrollWidth - slider.offsetWidth) {
+            scrollPos += slideWidth;
+        } else {
+            scrollPos = 0;
+        }
+        slider.scrollTo({
+            left: scrollPos,
+            behavior: "smooth"
+        });
+    }
+
+    setInterval(nextSlide, 7000); // Adjust scroll interval (3000ms = 3 seconds)
+});

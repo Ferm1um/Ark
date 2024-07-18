@@ -1086,8 +1086,29 @@ a.nav-3{
         margin: auto;
         font-size: 3em;
     }
-}
 
+    .slider {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Snap to each slide */
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+        scroll-behavior: smooth; /* Smooth scrolling behavior */
+    }
+    
+    .slide {
+        min-width: 90%; /* Adjust width of each slide */
+        padding: 10px;
+        text-align: center;
+        background-color: #ACB8CF;
+        margin-right: 15px;
+        border-radius: 20px;
+        font-size: 1.1em;
+        scroll-snap-align: center; /* Center alignment for scroll snapping */
+    }
+
+    .strelki{
+        display: none;
+    }
 
 
 @media (max-width: 425px) {
@@ -1200,3 +1221,6 @@ a.nav-3{
         font-size: 2em;
     }
 }
+
+
+
